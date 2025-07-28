@@ -5,7 +5,7 @@ var colors=generatearray(numSq);
 var squares=document.querySelectorAll(".square");
 console.log(squares);
 var colorDisplay= document.getElementById('tst');
-var pickedcolor=pickColor();	
+var pickedcolor=pickColor();
 var msgDisplay = document.querySelector(".msg");
 var heading= document.querySelector("h1");
 var reset=document.getElementById("new");
@@ -28,6 +28,7 @@ easybtn.addEventListener("click",function(){
 			squares[i].style.display="none";
 		}
 	}
+	heading.style.backgroundColor= "steelblue";
 })
 
 
@@ -41,15 +42,16 @@ hardbtn.addEventListener("click",function(){
 	for(var i=0; i<squares.length; i++){
 
 			squares[i].style.backgroundColor=colors[i];
-	
+
 
 			squares[i].style.display="block";
 	}
+	heading.style.backgroundColor= "steelblue";
 })
 
 
 reset.addEventListener("click",function(){
-	//color pick kru pehle 
+	//color pick kru pehle
 	 colors=generatearray(numSq);
 	 msgDisplay.textContent=" ";
 	 pickedcolor=pickColor();
@@ -58,7 +60,7 @@ reset.addEventListener("click",function(){
 	colorDisplay.textContent = pickedcolor;
 	// code chalau loop
 	for (var i=0; i<squares.length; i++){
-	squares[i].style.backgroundColor = colors[i];}  
+	squares[i].style.backgroundColor = colors[i];}
 	heading.style.backgroundColor= "steelblue";
 
 
@@ -85,7 +87,7 @@ for (var i=0; i<squares.length; i++){
 			this.style.backgroundColor = "#232323";
 			msgDisplay.textContent = "TRY AGAIN";
 					}
-	
+
 		}); }
 	function Changecolor(color){
 		for(var i=0; i<squares.length; i++){
@@ -117,7 +119,3 @@ function generatecolor(){
 
 	return "rgb(" + r +", " + g + ", " + b + ")";
 }
-	
-	
-
-
